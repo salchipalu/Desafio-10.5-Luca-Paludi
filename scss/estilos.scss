@@ -1,0 +1,224 @@
+@import "operators";
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-image: linear-gradient(to top, violet, black);
+    background-repeat: no-repeat;
+    height: fit-content;
+    background-size: 100%;
+}
+
+.body-vip{
+    background-image: linear-gradient(to top, goldenrod, black);
+    background-repeat: no-repeat;
+    height: fit-content;
+    background-size: 100%;
+}
+
+.contenedor-grid {
+    display: grid;
+    place-items: center;
+    margin-bottom: 117px;
+}
+
+.contenedor {
+    background-color: white;
+    min-height: 720px;
+    width: 1150px;
+    border: 9px solid black;
+    border-radius: 15px;
+    margin-top: 100px;
+    padding: 20px 20px 20px 20px;
+}
+
+.navbar{
+    border-radius: 5px;
+}
+
+.nav-link:hover{
+    color: violet;
+}
+
+.header__logo:hover{
+    opacity: 75%;
+    transition: all, 0.65s;
+
+}
+
+h1 {
+    @extend .texto;
+    font-size: 100px;
+    color: black;
+    margin: 25px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+
+.footer {
+    margin-top: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 5px solid black;
+    height: 65px;
+    background-color: grey;
+    border-radius: 7px;
+    
+
+    &__texto {
+        @extend .texto;
+        font-size: 40px;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+}
+
+
+
+.imagen {
+    margin: 5px;
+    height: 350px;
+    width: 300px;
+    border-radius: 5px;
+
+    &:hover {
+        transform: scale(1.05);
+        transition: all, 0.5s;
+    }
+}
+
+
+
+.contenedor_imagenes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.proximamente {
+    height: 700px;
+    border-radius: 1%;
+}
+
+.ppp{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+.card-img-top{
+    height: 230px;
+    border-radius: 5px;
+
+    &:hover{
+        transform: scale(1.05);
+        transition: all, 0.5s;
+    }
+}
+
+.link-contacto{
+    color: gray;
+
+    &:hover{
+        color: violet;
+    }
+}
+
+.titulo-vip{
+    color: goldenrod;
+}
+
+.texto-vip{
+    color: goldenrod;
+}
+
+.text-prod{
+    display: grid;
+    place-items: center;
+    margin-top: 10px;
+
+    & p{
+        font-size: 10px;
+        text-decoration: underline;
+    }
+}
+
+@media (min-width: 820px) and (max-width: 1180px){
+
+    .contenedor{
+        background-color: white;
+        min-height: 700px;
+        width: 750px;
+        border: 9px solid black;
+        border-radius: 15px;
+        margin-top: 80px;
+        margin-bottom: 60px;
+        padding: 10px 10px 10px 10px;    
+    }
+
+    
+    body{
+        background-image: linear-gradient(to top, violet, black);
+        background-size: 100%;
+    }
+
+    .proximamente{
+        height: 500px;
+    }
+
+    .txt-vip{
+        font-size: 25px;
+        
+    }
+
+    .card-img-top{
+        height: 180px;
+
+    }
+
+}
+
+@media (min-width: 390px) and (max-width: 573px){
+    .contenedor {
+        background-color: white;
+        min-height: 600px;
+        width: 360px;
+        border: 9px solid black;
+        border-radius: 15px;
+        margin-top: 80px;
+        margin-bottom: 60px;
+        padding: 10px 10px 10px 10px;
+    }
+
+    .header__logo{
+        height: 100px;
+        
+    }
+
+    .footer__texto{
+        font-size: 27px;
+    }
+
+    .imagen {
+        margin: 5px;
+        height: 270px;
+        width: 270px;
+    }
+
+    .proximamente{
+        height: 280px;
+    }
+
+    h1{
+        font-size: 50px;
+        margin-top: 55px;
+        margin-bottom: 25px;
+    }
+
+
+}
